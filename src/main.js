@@ -1,7 +1,6 @@
 import Vue from 'vue'
 import routes from './router'
 
-
 var app = new Vue({
     el: '#app',
     data: {

@@ -1,5 +1,5 @@
 <template>
-  <section>这是404页</section>
+  <h1>这是404页</h1>
 </template>
 
 <script>

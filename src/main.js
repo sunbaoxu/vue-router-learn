@@ -22,9 +22,15 @@ var app = new Vue({
     render (h) { return h(this.ViewComponent) }
   })
 
-  window.addEventListener('popstate', () => {
-    app.currentRoute = window.location.pathname;
+  //History 模式
+  // window.addEventListener('popstate', () => {
+  //   app.currentRoute = window.location.pathname;
 
-    console.log(app.currentRoute,'app.currentRoute')
-  })
+  // })
+
+  //Hash模式
+  window.addEventListener('hashchange',(e) =>{
+    let pathname = e.newURL.split('/#')[1]
+    app.currentRoute = pathname;
+  },false);
   

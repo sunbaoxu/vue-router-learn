@@ -27,13 +27,17 @@
       go (event) {
         event.preventDefault()
         this.$root.currentRoute = this.to
-        window.history.pushState(
-          null,
-          routes[this.to],
-          this.to
-        )
+        
+        //History 模式
+        // window.history.pushState(
+        //   null,
+        //   routes[this.to],
+        //   this.to
+        // )
 
-        console.log(window.history)
+        //Hash模式
+        window.location.hash =  this.to
+
       }
     }
   }
